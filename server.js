@@ -24,6 +24,12 @@ db.on('open', () => {
 
 
 
+app.get('/', (req, res) => {
+  res.send('You app is up')
+})
+
+
+
 app.listen(process.env.PORT, () => {
   console.log(`I am listening port ${process.env.PORT}`);
 })
