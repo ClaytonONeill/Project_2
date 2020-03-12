@@ -25,7 +25,7 @@ db.on('open', () => {
 
 
 app.get('/', (req, res) => {
-  res.send('You app is up')
+  res.send('Your app is up')
 })
 
 
