@@ -1,7 +1,46 @@
+
+// DEPENDENCIES
+// ====================
+
 const express = require('express');
 const mongoose = require('mongoose')
 const app = express();
 require('dotenv').config();
+const methodOverride = require('method-override');
+
+
+// MIDDLEWARE
+// ====================
+
+app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'));
+
+
+// CONTROLLERS
+// ====================
+
+const beerController = require('./controllers/beer.js');
+app.use('/The-Beer-Cellar', beerController);
+
+
+
+
+
+// HOMEROUTE
+// ====================
+
+app.get('/', (req, res) => {
+  res.send('Your app is up')
+})
+
+
+// CONNECTIONS
+// ====================
+
+
+app.listen(process.env.PORT, () => {
+  console.log(`I am listening port ${process.env.PORT}`);
+})
 
 const db = mongoose.connection;
 const dbupdateobject = {
@@ -9,8 +48,6 @@ const dbupdateobject = {
     useUnifiedTopology: true,
     useFindAndModify: false
 };
-
-console.log(process.env.DATABASE_URL);
 
 // Connect to Mongo
 mongoose.connect(process.env.DATABASE_URL, dbupdateobject);
@@ -21,15 +58,3 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 db.on('open', () => {
     console.log('Connection made!');
 });
-
-
-
-app.get('/', (req, res) => {
-  res.send('Your app is up')
-})
-
-
-
-app.listen(process.env.PORT, () => {
-  console.log(`I am listening port ${process.env.PORT}`);
-})

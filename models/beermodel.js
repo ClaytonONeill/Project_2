@@ -13,3 +13,4 @@ const beerEntry = new mongoose.Schema(
 const Beer = mongoose.model('test', beerEntry);
 
 module.exports = Beer;
+2
