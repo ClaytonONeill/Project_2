@@ -40,6 +40,9 @@ db.on('open', () => {
 const beerController = require('./controllers/beer.js');
 app.use('/The-Beer-Cellar', beerController);
 
+const userController = require('./controllers/user.js');
+app.use('/users', userController);
+
 
 
 

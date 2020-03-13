@@ -45,7 +45,7 @@ router.get('/', (req,res) => {
   Beer.find({}, (error, beerPosts) => {
     res.render('BeerMain/index.ejs',
     {
-      beers: beerPosts
+      beers: beerPosts.reverse()
     })
   })
 });
