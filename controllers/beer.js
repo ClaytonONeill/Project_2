@@ -2,14 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Beer = require('../models/beermodel.js');
 
-router.get('/', (req,res) => {
-  res.render('BeerMain/index.ejs')
-});
-
-
-
-
-
 
 router.get('/new', (req,res) => {
   res.render('BeerMain/new.ejs')
@@ -19,8 +11,14 @@ router.get('/new', (req,res) => {
 
 
 
-
-
+router.get('/', (req,res) => {
+  Beer.find({}, (error, beerPosts) => {
+    res.render('BeerMain/index.ejs',
+    {
+      beers: beerPosts
+    })
+  })
+});
 
 
 router.post('/', (req, res) => {
