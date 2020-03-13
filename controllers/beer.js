@@ -7,6 +7,20 @@ router.get('/new', (req,res) => {
   res.render('BeerMain/new.ejs')
 })
 
+router.put('/:id', (req,res) => {
+  Beer.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedEntry) => {
+    res.redirect('/The-Beer-Cellar')
+  })
+})
+
+router.get('/:id/edit', (req,res) => {
+  Beer.findById(req.params.id, (error, editBeer) => {
+    res.render('BeerMain/edit.ejs',
+    {
+      changeBeer: editBeer
+    })
+  })
+})
 
 router.get('/:id', (req,res) => {
   Beer.findById(req.params.id, (error, foundBeer) => {

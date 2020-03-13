@@ -48,7 +48,7 @@ app.use('/The-Beer-Cellar', beerController);
 // ====================
 
 app.get('/', (req, res) => {
-  res.send('Your app is up')
+  res.render('home.ejs')
 })
 
 
