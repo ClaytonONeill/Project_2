@@ -39,15 +39,18 @@ router.delete('/:id', (req,res) => {
 })
 
 
-
-
 router.get('/', (req,res) => {
-  Beer.find({}, (error, beerPosts) => {
-    res.render('BeerMain/index.ejs',
-    {
-      beers: beerPosts.reverse()
+  if(req.session.user){
+    Beer.find({}, (error, beerPosts) => {
+      res.render('BeerMain/index.ejs',
+      {
+        beers: beerPosts.reverse(),
+        user: req.session.user
+      })
     })
-  })
+  } else {
+    res.redirect('/session/new')
+  }
 });
 
 

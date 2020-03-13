@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const app = express();
 require('dotenv').config();
 const methodOverride = require('method-override');
+const expressSession = require('express-session')
 
 
 // MIDDLEWARE
@@ -14,7 +15,40 @@ const methodOverride = require('method-override');
 
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use(expressSession({
+  secret: 'fannymybones',
+  resave: false,
+  saveUninitialized: false
+}))
 
+
+
+// CONTROLLERS
+// ====================
+
+const beerController = require('./controllers/beer.js');
+app.use('/The-Beer-Cellar', beerController);
+
+const userController = require('./controllers/user.js');
+app.use('/users', userController);
+
+const sessionController = require('./controllers/session.js')
+app.use('/session', sessionController)
+
+// HOMEROUTE
+// ====================
+
+app.get('/', (req, res) => {
+  res.render('home.ejs')
+})
+
+
+// CONNECTIONS
+// ====================
+
+app.listen(process.env.PORT, () => {
+  console.log(`I am listening port ${process.env.PORT}`);
+})
 
 const db = mongoose.connection;
 const dbupdateobject = {
@@ -32,32 +66,3 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 db.on('open', () => {
     console.log('Connection made!');
 });
-
-
-// CONTROLLERS
-// ====================
-
-const beerController = require('./controllers/beer.js');
-app.use('/The-Beer-Cellar', beerController);
-
-const userController = require('./controllers/user.js');
-app.use('/users', userController);
-
-
-
-
-
-// HOMEROUTE
-// ====================
-
-app.get('/', (req, res) => {
-  res.render('home.ejs')
-})
-
-
-// CONNECTIONS
-// ====================
-
-app.listen(process.env.PORT, () => {
-  console.log(`I am listening port ${process.env.PORT}`);
-})
