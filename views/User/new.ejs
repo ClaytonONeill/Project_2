@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>New-User-Sign-Up</title>
+    <!-- CSS -->
+      <link rel="stylesheet" href="../css/home.css">
+      <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
+    <!-- FONTS  -->
   </head>
   <body>
-    <h1>This is the new user page.</h1>
+    <div class="homeInfo">
     <form action="/users" method="POST">
-      Username: <input type="text" name="username" placeholder="Username">
-      Password: <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="Sign Up!">
+        <h3 class="newH3">Username:</h3> <input type="text" name="username" placeholder="Username" class="texts"><br/>
+        <h3 class="newH3">Password:</h3> <input type="password" name="password" placeholder="Password" class="texts"><br/>
+      <div class="newSub">
+        <input type="submit" value="Sign Up!" class="subs">
+      </div>
+      </div>
     </form>
   </body>
 </html>
