@@ -2,11 +2,31 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>The-Beer-Cellar-Home</title>
+    <!--CSS  -->
+    <link rel="stylesheet" href="./css/home.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>This is the home page.</h1>
-    <a href="/session/new">Log In</a>
-    <a href="/users/new">Sign Up</a>
+    <div class="homeInfo">
+      <h1>Welcome to The Beer Cellar</h1>
+      <div class="infoContain">
+        <div class="logDiv">
+          <form action="/session" method="POST">
+            <h3 id='memberH3'>Already a member?</h3> <br/>
+            <input type="text" name="username" placeholder="Username" class="texts"><br/>
+            <div class="passDiv">
+              <input type="password" name="password" placeholder="Password" class="texts"><br/>
+            </div>
+              <input type="submit" value="Log In" class="subs">
+        </div>
+      <!-- <a href="/session/new"><input type="button" value="Log In"></a> -->
+        <div class="signDiv">
+          <h3>New User? Sign up here to enter The Beer Cellar!</h3>
+          <a href="/users/new"><input type="button" value="Sign Up" class="subs" id="logSub"></a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
