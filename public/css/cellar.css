@@ -44,36 +44,77 @@ nav h1  {
 
 
 .entryContain {
-  border: 1px solid red;
   width: 75%;
   margin: 0 auto;
 }
 
 
 .newEntry {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: white;
-  height: 10em;
+  background: rgba(232, 236, 241, 1);
+  border-radius: 10px;
+  height: 25em;
   padding: 1.5em;
   margin: .5em;
 }
 
 .entryInfo  {
-  border: 1px solid grey;
-  width: 30em;
+  border-right: 1px solid grey;
+  width: 100%;
+  padding: .5em;
+  text-align: center;
 }
 
+.entryInfo h2 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+.entryInfo h3 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.entryInfo h5 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#showEntry  {
+  background: rgba(255,255,255, .8);
+  height: 5em;
+  width: 20em;
+  margin-top: .7em;
+  /* margin-left: 11.5em; */
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+}
+
+#showEntry:hover  {
+  background: gold;
+  transition: .3s;
+}
+
+
 .entryImg {
-  border: 1px solid orange;
-  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 img {
-  height: 10em;
-  width: 10em;
+  height: 20em;
+  width: 23em;
+  margin-top: 1.8em;
+  border: 5px solid gold;
+  border-radius: 5px;
 }
 
 footer  {
