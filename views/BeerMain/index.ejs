@@ -2,21 +2,37 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>The-Beer-Cellar-Home</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/cellar.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>This is the index.</h1>
-      <% for (let i = 0; i < beers.length; i++) { %>
-        <div>
-          <h3><%=beers[i].name%></h3>
-          <h4><%=beers[i].company%></h4>
-          <img src="<%=beers[i].img%>" alt="<%=beers[i].name%>">
-          <h5><%=beers[i].rating%></h5>
-          <a href="/The-Beer-Cellar/<%=beers[i].id%>">Show Details</a>
+    <nav>
+      <h1>The Beer Cellar</h1>
+      <a href="/The-Beer-Cellar/New"><input type="button" value="New Entry" id="newEntry"></a>
+    </nav>
+      <div class="containAll">
+
+
+        <div class="entryContain">
+          <% for (let i = 0; i < beers.length; i++) { %>
+            <div class="newEntry">
+              <div class="entryInfo">
+                <h2><%=beers[i].name%></h2>
+                <h3><%=beers[i].company%></h3>
+                <h5><%=beers[i].rating%></h5>
+                <a href="/The-Beer-Cellar/<%=beers[i].id%>">Show Details</a>
+              </div>
+              <div class="entryImg">
+                <img src="<%=beers[i].img%>" alt="<%=beers[i].name%>">
+              </div>
+            </div>
+          <%
+          }
+          %>
         </div>
-      <%
-      }
-      %>
-      <a href="/The-Beer-Cellar/New">New Entry</a>
+      </div>
   </body>
 </html>
