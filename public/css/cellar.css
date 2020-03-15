@@ -307,3 +307,30 @@ NEW CSS
   background: lightgreen;
   transition: .3s;
 }
+
+
+/* ===================================
+EDIT CSS
+====================================== */
+
+
+#editDescription  {
+  line-height: 2em;
+  text-align: center;
+}
+
+.editH1 {
+  text-shadow: -1px 1px gold;
+}
+
+.editTexts  {
+  height: 3em;
+  width: 14em;
+  margin: .2em 0;
+  padding: .2em;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-align: center;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}

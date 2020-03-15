@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>The-Beer-Cellar-Editing-<%=changeBeer.name%></title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/cellar.css">
+    <link rel="stylesheet" href="/css/cellar.css">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
@@ -13,16 +13,22 @@
       <h1>The Beer Cellar</h1>
       <a href="/The-Beer-Cellar/New"><input type="button" value="New Entry" id="newEntryLink"></a>
     </nav>
-    <h1>Editing <%=changeBeer.name%></h1>
-    <div class="newContain">
-      <div class="newInfo">
+    <div class="showContain">
+      <h1 class="editH1">Editing <%=changeBeer.name%></h1>
       <form action="/The-Beer-Cellar/<%=changeBeer.id%>?_method=PUT" method="POST">
-          Name: <input type="text" name="name" value="<%=changeBeer.name%>"/><br/>
-          Company: <input type="text" name="company" value="<%=changeBeer.company%>" /><br/>
-          Description: <input type="text" name="description" value="<%=changeBeer.description%>" class="texts"/><br/>
-          Image: <input type="text" name="img" value="<%=changeBeer.img%>"/><br/>
-          Rating: <input type="number" name="rating" value="<%=changeBeer.rating%>"/><br/>
-        <input type="submit" value="Update Entry">
+        <div class="newContain">
+          <div class="newInfo">
+            <h2>Name:</h2> <input type="text" name="name" class="editTexts" value="<%=changeBeer.name%>"/><br/>
+            <h2>Company:</h2> <input type="text" name="company" class="editTexts" value="<%=changeBeer.company%>"/><br/>
+            <h2>Image link: </h2><input type="text" name="img" class="editTexts" id="" value="<%=changeBeer.img%>"/><br/>
+            <h2>Rating: (Out of 5)</h2> <input type="number" name="rating" class="editTexts" value="<%=changeBeer.rating%>"/><br/>
+          </div>
+          <div class="desDiv">
+            <h2>Edit the beer description!</h2><br/><textarea name="description" class="newText" id="editDescription"/><%=changeBeer.description%></textarea><br/>
+            <input type="submit" value="Update Beer" id="postButton"><br/>
+            <a href="/The-Beer-Cellar/<%=changeBeer.id%>"><input type="button" value="Go Back" class="showButtons"></a>
+          </div>
+        </div>
       </form>
       </div>
     </div>
