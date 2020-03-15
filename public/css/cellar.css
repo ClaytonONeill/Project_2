@@ -22,7 +22,7 @@ nav h1  {
   margin: 0;
 }
 
-#newEntryLink {
+.newEntryLink {
   background: rgba(255,255,255, .8);
   height: 4em;
   width: 15em;
@@ -33,7 +33,7 @@ nav h1  {
   text-transform: uppercase;
 }
 
-#newEntryLink:hover {
+.newEntryLink:hover {
   background: lightgrey;
   transition: .3s;
 }
