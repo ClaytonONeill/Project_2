@@ -1,5 +1,5 @@
 body  {
-  background: url('https://i.imgur.com/XL2JpzY.jpg')
+  background: url('https://i.imgur.com/WFYenf2.jpg')
 }
 
 
@@ -133,12 +133,18 @@ footer  {
 SHOW CSS
 ================= */
 
+.showBody {
+  background: url('https://i.imgur.com/WFYenf2.jpg')
+}
+
 .showContain  {
-  margin: 0 auto;
+  margin: 1em auto;
   width: 80%;
+  height: auto;
   background: rgba(232, 236, 241, 1);
   text-align: center;
   padding: 1em;
+  box-shadow: -2px 2px 5px black;
 }
 
 .showContain h1 {
@@ -184,6 +190,11 @@ p {
 
 #showImg  {
   margin: 2em 0 0 0;
+}
+
+#showImg:hover  {
+  transform: scale(1.5) translate(-2em);
+  transition: .5s ease-out;
 }
 
 .buttonContain  {
