@@ -15,6 +15,8 @@ nav {
 
 nav h1  {
   font-size: 3em;
+  letter-spacing: .4em;
+  text-shadow: -1px 1px white;
   font-family: 'Unica One', cursive;
   text-transform: uppercase;
   margin: 0;
@@ -54,10 +56,11 @@ nav h1  {
   flex-direction: row;
   justify-content: space-around;
   background: rgba(232, 236, 241, 1);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   height: 25em;
   padding: 1.5em;
   margin: .5em;
+  box-shadow: -2px 2px 5px black;
 }
 
 .entryInfo  {
@@ -72,18 +75,21 @@ nav h1  {
   text-transform: uppercase;
   font-size: 3em;
   text-decoration: underline;
+  text-shadow: -1px 1px white;
 }
 
 .entryInfo h3 {
   font-family: 'Unica One', cursive;
   text-transform: uppercase;
   font-size: 2em;
+  text-shadow: -1px 1px white;
 }
 
 .entryInfo h5 {
   font-family: 'Unica One', cursive;
   text-transform: uppercase;
   font-size: 1.5em;
+  text-shadow: -1px 1px white;
 }
 
 #showEntry  {
@@ -95,12 +101,13 @@ nav h1  {
   border: 3px solid black;
   border-radius: 5px;
   font-family: 'Unica One', cursive;
+  font-size: .7em;
   text-transform: uppercase;
 }
 
 #showEntry:hover  {
   background: gold;
-  transition: .3s;
+  transition: .5s;
 }
 
 
@@ -110,13 +117,117 @@ nav h1  {
 }
 
 img {
-  height: 20em;
+  height: 21em;
   width: 23em;
   margin-top: 1.8em;
+  margin-left: 1em;
   border: 5px solid gold;
   border-radius: 5px;
 }
 
 footer  {
   background: gold;
+}
+
+/* ===============
+SHOW CSS
+================= */
+
+.showContain  {
+  margin: 0 auto;
+  width: 80%;
+  background: rgba(232, 236, 241, 1);
+  text-align: center;
+  padding: 1em;
+}
+
+.showContain h1 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 4em;
+  margin-top: .1em;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.showContain h2 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.showContain h5 {
+  font-family: 'Unica One', cursive;
+  margin-bottom: 0;
+  font-size: 2em;
+}
+
+.showInfoContain  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 1px solid grey;
+}
+
+.description  {
+  width: 30em;
+  height: auto;
+}
+
+p {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#showImg  {
+  margin: 2em 0 0 0;
+}
+
+.buttonContain  {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3em;
+  border-top: 1px solid grey;
+}
+
+.showButtons {
+  background: rgba(255,255,255, .8);
+  height: 4em;
+  width: 15em;
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: 2em;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+}
+
+.showButtons:hover  {
+  background: gold;
+  transition: .5s;
+}
+
+#deleteButton {
+  background: rgba(255,255,255, .8);
+  height: 4em;
+  width: 15em;
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: 2em;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+}
+
+#deleteButton:hover {
+  background: red;
+  transition: .5s;
 }

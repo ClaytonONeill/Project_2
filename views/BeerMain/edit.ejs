@@ -2,10 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>The-Beer-Cellar-Editing-<%=changeBeer.name%></title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/cellar.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>This is the edit page.</h1>
+    <h1>Editing <%=changeBeer.name%></h1>
     <form action="/The-Beer-Cellar/<%=changeBeer.id%>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%=changeBeer.name%>"/><br/>
       Company: <input type="text" name="company" value="<%=changeBeer.company%>" /><br/>

@@ -2,18 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>The-Beer-Cellar-<%=thisBeer.name%></title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/cellar.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1><%=thisBeer.name%></h1>
-    <h2><%=thisBeer.company%></h2>
-    <img src="<%=thisBeer.img%>" alt="<%=thisBeer.name%>">
-    <p><%=thisBeer.description%></p>
-    <h5><%=thisBeer.rating%></h5>
-    <a href="/The-Beer-Cellar/<%=thisBeer.id%>/edit">Edit Entry</a>
-    <form action="/The-Beer-Cellar/<%=thisBeer.id%>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete Entry">
-    </form>
-    <a href="/The-Beer-Cellar">Go Back</a>
+      <div class="showContain">
+        <h1><%=thisBeer.name%></h1>
+        <h2><%=thisBeer.company%></h2>
+          <div class="showInfoContain">
+            <div class="description">
+              <p><%=thisBeer.description%></p>
+              <h5><%=thisBeer.rating%>/5</h5>
+            </div>
+            <div class="showImgContain">
+              <img src="<%=thisBeer.img%>" alt="<%=thisBeer.name%>" id='showImg'><br/>
+            </div>
+          </div>
+          <div class="buttonContain">
+                <a href="/The-Beer-Cellar/<%=thisBeer.id%>/edit"><input type="button" value="EDIT ENTRY" class="showButtons"></a>
+                  <form action="/The-Beer-Cellar/<%=thisBeer.id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE ENTRY" id="deleteButton">
+                  </form>
+                <a href="/The-Beer-Cellar"><input type="button" value="GO BACK" class="showButtons"></a>
+            </div>
+      </div>
   </body>
 </html>
