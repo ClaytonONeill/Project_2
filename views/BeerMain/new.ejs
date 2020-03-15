@@ -9,14 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>This is the new page.</h1>
+  <nav>
+    <h1>The Beer Cellar</h1>
+    <a href="/The-Beer-Cellar"><input type="button" value="Go Back" id="newEntryLink"></a>
+  </nav>
+    <div class="showContain">
       <form action="/The-Beer-Cellar" method="POST">
-        Name: <input type="text" name="name" /><br/>
-        Company: <input type="text" name="company" /><br/>
-        Description: <textarea name="description"></textarea><br/>
-        Image: <input type="text" name="img" /><br/>
-        Rating: <input type="number" name="rating" /><br/>
-        <input type="submit" value="Post Beer">
+        <div class="newContain">
+          <div class="newInfo">
+            <h2>Name:</h2> <input type="text" name="name" class="texts"/><br/>
+            <h2>Company:</h2> <input type="text" name="company" class="texts"/><br/>
+            <h2>Image link: </h2><input type="text" name="img" class="texts"/><br/>
+            <h2>Rating: (Out of 5)</h2> <input type="number" name="rating" class="texts"/><br/>
+          </div>
+          <div class="desDiv">
+            <h2>Tell us about this beer!</h2><br/><textarea name="description" class="newText"></textarea><br/>
+            <input type="submit" value="Post Beer" id="postButton">
+          </div>
+        </div>
       </form>
+    </div>
   </body>
 </html>

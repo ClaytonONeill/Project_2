@@ -9,14 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Unica+One&display=swap" rel="stylesheet">
   </head>
   <body>
+    <nav>
+      <h1>The Beer Cellar</h1>
+      <a href="/The-Beer-Cellar/New"><input type="button" value="New Entry" id="newEntryLink"></a>
+    </nav>
     <h1>Editing <%=changeBeer.name%></h1>
-    <form action="/The-Beer-Cellar/<%=changeBeer.id%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=changeBeer.name%>"/><br/>
-      Company: <input type="text" name="company" value="<%=changeBeer.company%>" /><br/>
-      Description: <textarea name="description" value="<%=changeBeer.description%>" /></textarea><br/>
-      Image: <input type="text" name="img" value="<%=changeBeer.img%>"/><br/>
-      Rating: <input type="number" name="rating" value="<%=changeBeer.rating%>"/><br/>
-      <input type="submit" value="Update Entry">
-    </form>
+    <div class="newContain">
+      <div class="newInfo">
+      <form action="/The-Beer-Cellar/<%=changeBeer.id%>?_method=PUT" method="POST">
+          Name: <input type="text" name="name" value="<%=changeBeer.name%>"/><br/>
+          Company: <input type="text" name="company" value="<%=changeBeer.company%>" /><br/>
+          Description: <input type="text" name="description" value="<%=changeBeer.description%>" class="texts"/><br/>
+          Image: <input type="text" name="img" value="<%=changeBeer.img%>"/><br/>
+          Rating: <input type="number" name="rating" value="<%=changeBeer.rating%>"/><br/>
+        <input type="submit" value="Update Entry">
+      </form>
+      </div>
+    </div>
   </body>
 </html>

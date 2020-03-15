@@ -22,7 +22,7 @@ nav h1  {
   margin: 0;
 }
 
-#newEntry {
+#newEntryLink {
   background: rgba(255,255,255, .8);
   height: 4em;
   width: 15em;
@@ -33,7 +33,7 @@ nav h1  {
   text-transform: uppercase;
 }
 
-#newEntry:hover {
+#newEntryLink:hover {
   background: lightgrey;
   transition: .3s;
 }
@@ -129,12 +129,28 @@ footer  {
   background: gold;
 }
 
-/* ===============
+/* ===================================
 SHOW CSS
-================= */
+====================================== */
 
 .showBody {
   background: url('https://i.imgur.com/WFYenf2.jpg')
+}
+
+#newEntry {
+  background: rgba(255,255,255, .8);
+  height: 4em;
+  width: 15em;
+  margin-top: .7em;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+}
+
+#newEntry:hover {
+  background: lightgrey;
+  transition: .3s;
 }
 
 .showContain  {
@@ -241,4 +257,53 @@ p {
 #deleteButton:hover {
   background: red;
   transition: .5s;
+}
+
+
+/* ===================================
+NEW CSS
+====================================== */
+
+.newContain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.newText  {
+  height: 10em;
+  width: 30em;
+  resize: none;
+  font-size: 1em;
+}
+
+.texts  {
+  height: 3em;
+  width: 14em;
+  margin: .2em 0;
+  padding: .2em;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+}
+
+#postButton  {
+  background: rgba(255,255,255, .8);
+  height: 5em;
+  width: 20em;
+  margin-top: 4em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: 2em;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-family: 'Unica One', cursive;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+#postButton:hover {
+  background: lightgreen;
+  transition: .3s;
 }
