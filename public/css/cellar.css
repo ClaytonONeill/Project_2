@@ -94,6 +94,14 @@ nav h1  {
   text-shadow: -1px 1px white;
 }
 
+.entryInfo h4 {
+  font-family: 'Unica One', cursive;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  text-shadow: -1px 1px white;
+  margin: .2em 0;
+}
+
 .entryInfo h5 {
   font-family: 'Unica One', cursive;
   text-transform: uppercase;

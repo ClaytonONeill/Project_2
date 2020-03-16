@@ -49,7 +49,7 @@ router.get('/', (req,res) => {
       })
     })
   } else {
-    res.redirect('/session/new')
+    res.redirect('/')
   }
 });
 

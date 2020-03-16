@@ -19,6 +19,7 @@
           <% for (let i = 0; i < beers.length; i++) { %>
             <div class="newEntry">
               <div class="entryInfo">
+                  <h4><%=user.username%> is drinking:</h4>
                   <h2><%=beers[i].name%></h2>
                   <h3><%=beers[i].company%></h3>
                   <h5>RATING: <%=beers[i].rating%></h5>
