@@ -61,6 +61,13 @@ nav h1  {
   padding: 1.5em;
   margin: .5em;
   box-shadow: -2px 2px 5px black;
+  animation: .7s;
+  animation-name: show;
+}
+
+@keyframes show {
+  0% {transform: translateX(-50em);}
+  100% {transform: translateX(0em);}
 }
 
 .entryInfo  {
@@ -69,6 +76,8 @@ nav h1  {
   padding: .5em;
   text-align: center;
 }
+
+
 
 .entryInfo h2 {
   font-family: 'Unica One', cursive;
@@ -195,6 +204,13 @@ SHOW CSS
 .description  {
   width: 30em;
   height: auto;
+  animation: 1.4s;
+  animation-name: hide;
+}
+
+@keyframes hide {
+  0% {color: rgba(255,255,255, .8);}
+  100% {color: black;}
 }
 
 p {
