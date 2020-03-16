@@ -41,4 +41,4 @@ was named consistantly throgh out my file structure was a bit rocky at times.
 I would have loved to have added a bit more capability to the site, the pictures
 look a little weird as they are resized and squashed/stretched. 
 Incorporating more information about the place of purchase or a link to each brewery 
-would be really cool. Also adding the ability to have tags for your entries that can #### searched for later. Basically I feel that this was pretty barebones for what it could be but I like the ability to continue to grow this project.
+would be really cool. Also adding the ability to have tags for your entries that can be searched for later. Basically I feel that this was pretty barebones for what it could be but I like the ability to continue to grow this project.
