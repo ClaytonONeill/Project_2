@@ -37,7 +37,7 @@ way around.
 ### Struggles
 
 Making sure that the routes were communicating well, that each variable and key value
-was named consistantly throgh out my file structure was a bit rocky at times.
+was named consistantly through out my file structure was a bit rocky at times.
 I would have loved to have added a bit more capability to the site, the pictures
 look a little weird as they are resized and squashed/stretched. 
 Incorporating more information about the place of purchase or a link to each brewery 
